@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI时代我们如何进行编程（原生版）</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <canvas id="particles"></canvas>
+    <div class="dots"></div>
+    <button class="back-btn" id="backBtn">返回首页</button>
+
+    <!-- ================== 第1页 ================== -->
+    <div class="slide slide-1 active">
+      <div class="slide-container">
+        <div class="text-content top-decor">
+          <div class="decor-en">ARTIFICIAL INTELLIGENCE ERA</div>
+          <div class="main-theme">Vibe Coding</div>
+          <div class="sub-title">
+            <span class="blue-text" id="goto2">AI 时代</span><br />
+            我们该如何进行编程
+          </div>
+        </div>
+        <div class="glass-card">
+          <canvas id="cardCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================== 第2页 ================== -->
+    <div class="slide slide-2">
+      <div class="page-header">
+        <div class="cn">AI 工具与使用现象</div>
+        <div class="line"></div>
+        <div class="en">AI Tools & Usage</div>
+      </div>
+      <div class="slide-container">
+        <div class="text-content">
+          <h2>随处可见的AI工具</h2>
+          <p>豆包、Kimi、DeepSeek、ChatGPT...</p>
+          <p>用于日常搜索、题目解答、鬼畜搞笑...</p>
+          <p>极大地便利了生产的需要</p>
+          <p>除了满足日常生活简单的需求外</p>
+          <p>
+            在一些<span class="project-trigger" id="projectTrigger"
+              >大型项目</span
+            >中也能看到一点它的身影
+          </p>
+        </div>
+
+        <!-- 大型项目弹窗 -->
+        <div class="project-overlay" id="projectOverlay">
+          <div class="project-popup">
+            <button class="project-close" id="projectClose">✕</button>
+            <p class="project-caption">黑客松巅峰赛获奖作品</p>
+            <div class="project-scroll">
+              <div class="project-track">
+                <div class="project-row right">
+                  <img src="assets/HKS%201.jpg" alt="案例1" /><img
+                    src="assets/HKS%202.jpg"
+                    alt="案例2"
+                  /><img src="assets/HKS%203.jpg" alt="案例3" /><img
+                    src="assets/HKS%204.jpg"
+                    alt="案例4"
+                  /><img src="assets/HKS%205.jpg" alt="案例5" /><img
+                    src="assets/HKS%206.jpg"
+                    alt="案例6"
+                  />
+                  <img src="assets/HKS%201.jpg" alt="案例1" /><img
+                    src="assets/HKS%202.jpg"
+                    alt="案例2"
+                  /><img src="assets/HKS%203.jpg" alt="案例3" /><img
+                    src="assets/HKS%204.jpg"
+                    alt="案例4"
+                  /><img src="assets/HKS%205.jpg" alt="案例5" /><img
+                    src="assets/HKS%206.jpg"
+                    alt="案例6"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="logo-wrap">
+          <div class="icon-track">
+            <div class="icon-row right">
+              <div class="icon-item">
+                <img
+                  src="assets/claudecode-color.png"
+                  alt="Claude Code"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/deepseek-color.png"
+                  alt="DeepSeek"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img src="assets/wenxin-color.png" alt="千问" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/doubao.png" alt="豆包" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/yuanbao-color.png" alt="元宝" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/openai.png"
+                  alt="GitHub Copilot"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/trae-color.png"
+                  alt="OpenClaw"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img src="assets/spark-color.png" alt="Cursor" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/kimi.png" alt="Kimi" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/bing-color.png" alt="Bing" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/claudecode-color.png"
+                  alt="Claude Code"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/deepseek-color.png"
+                  alt="DeepSeek"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img src="assets/wenxin-color.png" alt="千问" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/doubao.png" alt="豆包" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/yuanbao-color.png" alt="元宝" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/openai.png"
+                  alt="GitHub Copilot"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/trae-color.png"
+                  alt="OpenClaw"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img src="assets/spark-color.png" alt="Cursor" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/kimi.png" alt="Kimi" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/bing-color.png" alt="Bing" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div class="icon-track">
+            <div class="icon-row left">
+              <div class="icon-item">
+                <img src="assets/bing-color.png" alt="Bing" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/kimi.png" alt="Kimi" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/spark-color.png" alt="Cursor" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/trae-color.png"
+                  alt="OpenClaw"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/openai.png"
+                  alt="GitHub Copilot"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img src="assets/yuanbao-color.png" alt="元宝" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/doubao.png" alt="豆包" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/wenxin-color.png" alt="千问" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/deepseek-color.png"
+                  alt="DeepSeek"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/claudecode-color.png"
+                  alt="Claude Code"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img src="assets/bing-color.png" alt="Bing" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/kimi.png" alt="Kimi" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/spark-color.png" alt="Cursor" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/trae-color.png"
+                  alt="OpenClaw"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/openai.png"
+                  alt="GitHub Copilot"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img src="assets/yuanbao-color.png" alt="元宝" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/doubao.png" alt="豆包" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img src="assets/wenxin-color.png" alt="千问" loading="lazy" />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/deepseek-color.png"
+                  alt="DeepSeek"
+                  loading="lazy"
+                />
+              </div>
+              <div class="icon-item">
+                <img
+                  src="assets/claudecode-color.png"
+                  alt="Claude Code"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================== 第3页 ================== -->
+    <div class="slide slide-3">
+      <div class="page-header">
+        <div class="cn">Vibe Coding</div>
+        <div class="line"></div>
+        <div class="en">Vibe Coding Introduction</div>
+      </div>
+      <div class="slide-container">
+        <div class="stack-img-box">
+          <img
+            src="assets/Andrej Karpathy.jpg"
+            alt="Andrej Karpathy"
+            class="stack-cover-img"
+          />
+          <a
+            class="stack-play-btn"
+            href="https://www.bilibili.com/video/BV15o94BqEk7"
+            target="_blank"
+            title="在 Bilibili 观看"
+          >
+            <svg viewBox="0 0 24 24" fill="#0a0f1e" width="24" height="24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </a>
+        </div>
+        <div class="stack-text-wrap">
+          <div class="stack-main-title title-trigger" data-info="vibe-card">
+            Vibe Coding
+          </div>
+          <div class="info-card" id="vibe-card">
+            <div class="info-card-inner">
+              <p class="info-quote-en">
+                "There's a new kind of coding I call 'vibe coding', where you
+                fully give in to the vibes, embrace exponentials, and forget
+                that the code even exists."
+              </p>
+              <p class="info-quote-zh">
+                有一种新的编程方式我称之为"氛围编程"——你完全沉浸在这种感觉中，拥抱指数级增长，甚至忘记代码本身的存在。
+              </p>
+            </div>
+          </div>
+          <div class="stack-sub-en">ATMOSPHERE PROGRAMMING</div>
+          <div class="stack-desc">
+            由
+            <span class="info-trigger" data-info="andrej-card"
+              >Andrej Karpathy</span
+            >
+            率先提出，
+          </div>
+          <div class="info-card" id="andrej-card">
+            <div class="info-card-inner">
+              <p class="info-bio">
+                Andrej
+                Karpathy，斯洛伐克裔加拿大计算机科学家，深度学习与计算机视觉领域顶尖学者。OpenAI
+                联合创始人、前特斯拉 AI 负责人、斯坦福大学
+                <a
+                  class="cs231n-link"
+                  href="https://www.bilibili.com/video/BV1b1agz5ERC?vd_source=e2191f89c557f5ac44bb6c7aa3967c7c"
+                  target="_blank"
+                  >CS231n 课程</a
+                >
+                主讲人，以卓越的教学和开源贡献深刻影响了全球 AI 研究与工程实践。
+              </p>
+            </div>
+          </div>
+          <div class="stack-desc">
+            以自然语言表达创意思路，<br />
+            交由 AI 落地实现代码细节，<br />
+            弱化语法束缚，专注创作本身。
+          </div>
+        </div>
+        <div class="stack-bottom-note">AI · 新时代编程范式</div>
+      </div>
+    </div>
+
+    <!-- ================== 第4页 ================== -->
+    <div class="slide slide-4">
+      <div class="page-header">
+        <div class="cn">Vibe Coding 实战流程</div>
+        <div class="line"></div>
+        <div class="en">Practical Process</div>
+      </div>
+      <div class="slide-container">
+        <div class="text-content">
+          <h2>如何用 Vibe Coding 编程</h2>
+        </div>
+
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <h3>提出需求</h3>
+              <p>用自然语言描述你想要实现的功能和效果</p>
+            </div>
+          </div>
+          <div class="process-arrow">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffbd59"
+              stroke-width="1.5"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <h3>描述逻辑</h3>
+              <p>逐步细化需求，补充边界条件和处理规则</p>
+            </div>
+          </div>
+          <div class="process-arrow">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffbd59"
+              stroke-width="1.5"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <h3>验证结果</h3>
+              <p>运行代码，检查输出是否符合预期效果</p>
+            </div>
+          </div>
+          <div class="process-arrow">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffbd59"
+              stroke-width="1.5"
+            >
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <div class="step-body">
+              <h3>优化迭代</h3>
+              <p>反馈报错或改进点，持续优化代码</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="process-hint">点击左侧标签查看实际案例</p>
+      </div>
+
+      <div
+        class="drawer-tab drawer-tab-1"
+        data-drawer="drawer1"
+        id="drawerTab1"
+        style="left: 0"
+      >
+        ◀
+      </div>
+
+      <div class="drawer-panel" id="drawer1" style="width: 520px">
+        <button class="drawer-close">✕</button>
+        <div class="drawer-resize-handle"></div>
+
+        <div class="drawer-slides" id="drawerSlides">
+          <div class="drawer-slide active">
+            <div class="drawer-thumb">
+              <img
+                src="assets/ex1.png"
+                alt="案例1"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <h3>Vibe Coding教程：对AI说话就能做出软件</h3>
+            <p>
+              这个视频是一份Vibe
+              Coding零基础实操教程，核心是教完全不会代码的人，怎么用大白话向AI提需求，从0到1做出一个能运行的软件。
+            </p>
+            视频重点讲了几个关键步骤： 1. 第一次提需求2. Mode规划3. 项目初始化4.
+            分步开发5. 验证运行6. 迭代优化7. 上下文管理
+            <p>教程用的工具组合是：VS Code + Claude Code + DeepSeek v4 Pro</p>
+            <a
+              class="drawer-link"
+              href="https://www.xiaohongshu.com/discovery/item/69f9c07e00000000360183da"
+              target="_blank"
+              >在小红书查看 →</a
+            >
+          </div>
+          <div class="drawer-slide">
+            <div class="drawer-thumb">
+              <img
+                src="assets/ex2.png"
+                alt="案例2"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <h3>AI 建站流｜电影感网页，普通人也能照着做</h3>
+            <p>
+              最近很多人被 Claude Code
+              卡住，就会下意识觉得：那我是不是做不了了。
+            </p>
+            <p>
+              但其实，要做出效果好的网页，拼的从来不只是你有没有用到最新模型。
+            </p>
+            <p>
+              真正有用的是这套流程： 1. 先定 landing page 的参考结构
+              2.再备好人物、流体、动态视频这些素材 3. 用 Gemini
+              把网站骨架先跑出来 4. 再把素材按 section 一块块替进去修质感
+            </p>
+            <p>工具一直在换，但真正会用AI的人，通常都不会被困太久。</p>
+            <a
+              class="drawer-link"
+              href="https://www.xiaohongshu.com/discovery/item/69e15aae000000002103b21c?source=webshare&xhsshare=pc_web&xsec_token=ABLlpyjtMYDxHbvBYH8Lt634g7qeGflibSZzU8hukbGQ8=&xsec_source=pc_share"
+              target="_blank"
+              >在小红书查看 →</a
+            >
+          </div>
+        </div>
+
+        <div class="drawer-slide-nav">
+          <div class="drawer-slide-dot active"></div>
+          <div class="drawer-slide-dot"></div>
+        </div>
+      </div>
+
+      <div class="drawer-overlay" id="drawerOverlay"></div>
+    </div>
+
+    <!-- ================== 第5页 ================== -->
+    <div class="slide slide-5">
+      <div class="page-header">
+        <div class="cn">问题与解决方案</div>
+        <div class="line"></div>
+        <div class="en">Problems & Solutions</div>
+      </div>
+      <div class="slide-5-layout">
+        <div class="slide-5-left">
+          <div class="text-content">
+            <h2>AI 编程<br />常见问题</h2>
+            <p class="slide-5-sub">左右滑动卡片<br />点击翻面查看答案</p>
+          </div>
+        </div>
+        <div class="slide-5-divider">
+          <div class="divider-line"></div>
+          <div class="divider-glow"></div>
+        </div>
+        <div class="slide-5-right">
+          <div class="cards-track-wrapper" id="cardsTrackWrapper">
+            <div class="cards-mask-left"></div>
+            <div class="cards-track" id="cardsTrack">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div
+                    class="flip-card-front"
+                    style="border-radius: 28px 8px 28px 8px"
+                  >
+                    <span class="flip-card-tag">❌ 问题 01</span>
+                    <h3>出来的成品AI味儿太重</h3>
+                    <p>配色模板化、排版死板、交互千篇一律，没有个人风格</p>
+                    <span class="flip-card-hint">点击翻面 →</span>
+                  </div>
+                  <div
+                    class="flip-card-back"
+                    style="border-radius: 28px 8px 28px 8px"
+                  >
+                    <span class="flip-card-tag">✅ 解决 01</span>
+                    <h3>找到具有设计感的UI实例</h3>
+                    <p>
+                      AI擅长的是模仿而不是创造，想去掉AI
+                      味儿，第一步就是给它找个高质量的参考锚点，让它照着你的审美做，而不是自己瞎发挥。
+                    </p>
+                    <span class="flip-card-hint">← 点击翻面</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cards-connector">
+                <div class="connector-line"></div>
+                <div class="connector-dot"></div>
+                <div class="connector-line"></div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div
+                    class="flip-card-front"
+                    style="border-radius: 24px 6px 24px 6px"
+                  >
+                    <span class="flip-card-tag">❌ 问题 02</span>
+                    <h3>bug修不好</h3>
+                    <p>
+                      第一个bug修好了，第二个bug又来了，AI修了这个又坏了那个，陷入无休止的修bug循环。
+                    </p>
+                    <span class="flip-card-hint">点击翻面 →</span>
+                  </div>
+                  <div
+                    class="flip-card-back"
+                    style="border-radius: 24px 6px 24px 6px"
+                  >
+                    <span class="flip-card-tag">✅ 解决 02</span>
+                    <h3>小范围修改</h3>
+                    <p>
+                      别把多个 Bug 一次性丢给
+                      AI，一次只解决一个问题，验证通过再处理下一个。
+                      并且要说清楚修复的到底是哪个地方需要修改。
+                      如果有能力的话，也可以自己手动修改。
+                    </p>
+                    <span class="flip-card-hint">← 点击翻面</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cards-connector">
+                <div class="connector-line"></div>
+                <div class="connector-dot"></div>
+                <div class="connector-line"></div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div
+                    class="flip-card-front"
+                    style="border-radius: 32px 10px 32px 10px"
+                  >
+                    <span class="flip-card-tag">❌ 问题 03</span>
+                    <h3>AI 不会主动使用架构与算法</h3>
+                    <p>
+                      AI
+                      本身没有自主设计意识，不会自动为项目规划合理架构、选用合适算法，只会按基础需求生成代码
+                    </p>
+                    <span class="flip-card-hint">点击翻面 →</span>
+                  </div>
+                  <div
+                    class="flip-card-back"
+                    style="border-radius: 32px 10px 32px 10px"
+                  >
+                    <span class="flip-card-tag">✅ 解决 03</span>
+                    <h3>主动定义</h3>
+                    <p>
+                      你必须主动明确要求，在开发前就告诉 AI： 指定项目架构模式
+                      要求使用规范的目录结构与代码设计 明确需要用到的算法 /
+                      优化逻辑 让 AI 先输出架构方案，确认后再开发
+                    </p>
+                    <span class="flip-card-hint">← 点击翻面</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cards-mask-right"></div>
+          </div>
+          <div class="cards-nav">
+            <div class="cards-nav-dot active" data-index="0"></div>
+            <div class="cards-nav-dot" data-index="1"></div>
+            <div class="cards-nav-dot" data-index="2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================== 第6页：AI 工具推荐 ================== -->
+    <div class="slide slide-6">
+      <div class="page-header">
+        <div class="cn">网站分享</div>
+        <div class="line"></div>
+        <div class="en">Website Share</div>
+      </div>
+      <div class="slide-container">
+        <div class="text-content">
+          <h2>网站分享</h2>
+        </div>
+        <div class="tools-strip">
+          <a
+            class="strip-card"
+            href="https://www.designspells.com/"
+            target="_blank"
+          >
+            <div
+              class="strip-bg"
+              style="background: url(assets/Design%20Spells.png) center/cover"
+            ></div>
+            <div class="strip-label">Design Spells</div>
+            <div class="strip-tag">设计灵感</div>
+          </a>
+          <a class="strip-card" href="https://www.moonshot.ai/" target="_blank">
+            <div
+              class="strip-bg"
+              style="background: url(assets/Moonshot%20AI.png) center/cover"
+            ></div>
+            <div class="strip-label">Moonshot AI</div>
+            <div class="strip-tag">AI 助手</div>
+          </a>
+          <a class="strip-card" href="https://www.aura.build/" target="_blank">
+            <div
+              class="strip-bg"
+              style="background: url(assets/Aura%20Build.png) center/cover"
+            ></div>
+            <div class="strip-label">Aura Build</div>
+            <div class="strip-tag">构建工具</div>
+          </a>
+          <a class="strip-card" href="https://reactbits.dev/" target="_blank">
+            <div
+              class="strip-bg"
+              style="background: url(assets/React%20Bits.png) center/cover"
+            ></div>
+            <div class="strip-label">React Bits</div>
+            <div class="strip-tag">UI 组件</div>
+          </a>
+          <a class="strip-card" href="https://godly.website/" target="_blank">
+            <div
+              class="strip-bg"
+              style="background: url(assets/Godly.png) center/cover"
+            ></div>
+            <div class="strip-label">Godly</div>
+            <div class="strip-tag">网站灵感</div>
+          </a>
+          <a class="strip-card" href="https://motionsites.ai/" target="_blank">
+            <div
+              class="strip-bg"
+              style="background: url(assets/Motion%20Sites.png) center/cover"
+            ></div>
+            <div class="strip-label">Motion Sites</div>
+            <div class="strip-tag">动效资源</div>
+          </a>
+          <a
+            class="strip-card"
+            href="https://shadergradient.co/"
+            target="_blank"
+          >
+            <div
+              class="strip-bg"
+              style="background: url(assets/Shader%20Gradient.png) center/cover"
+            ></div>
+            <div class="strip-label">Shader Gradient</div>
+            <div class="strip-tag">渐变效果</div>
+          </a>
+          <a
+            class="strip-card"
+            href="https://www.figcomponents.com/"
+            target="_blank"
+          >
+            <div
+              class="strip-bg"
+              style="background: url(assets/Fig%20Components.png) center/cover"
+            ></div>
+            <div class="strip-label">Fig Components</div>
+            <div class="strip-tag">Figma 组件</div>
+          </a>
+          <a
+            class="strip-card"
+            href="https://www.tryvariant.com/"
+            target="_blank"
+          >
+            <div
+              class="strip-bg"
+              style="background: url(assets/Try%20Variant.png) center/cover"
+            ></div>
+            <div class="strip-label">Try Variant</div>
+            <div class="strip-tag">A/B 测试</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================== 结束页 ================== -->
+    <div class="slide">
+      <div class="page-header">
+        <div class="cn">谢谢观看</div>
+        <div class="line"></div>
+        <div class="en">Thanks</div>
+      </div>
+      <div class="slide-container">
+        <div class="text-content" style="text-align: center">
+          <h1 style="font-size: 5rem">谢谢大家</h1>
+          <p style="margin-top: 1rem; font-size: 1.4rem; color: #ffbd59">
+            Keep Thinking · Keep Moving · Keep Learning
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
